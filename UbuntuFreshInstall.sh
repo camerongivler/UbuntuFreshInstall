@@ -45,7 +45,6 @@ git config --global user.email "cameron@aqueti.com"
 
 # Mount NFS
 mkdir /home/cameron/src
-cp /etc/fstab /home/cameron/fstab.old
 echo '10.0.0.228:/shared/users/cameron/src /home/cameron/src nfs user,noatime,nolock,intr,tcp,actimeo=1800 0 0' | sudo tee -a /etc/fstab
 mount /home/cameron/src
 
