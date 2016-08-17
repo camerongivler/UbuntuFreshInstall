@@ -16,10 +16,10 @@ sudo apt install -y gnome-session-fallback  #14.04
 sudo apt install -y gnome-session-flashback #16.04
 sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev
 
-# Create softlinks to clang 3.6 so that cmake finds it FOR TEGRA ONLY
-#sudo apt install clang-3.6
-#sudo ln -s /usr/bin/clang-3.6 /usr/bin/clang
-#sudo ln -s /usr/bin/clang++-3.6 /usr/bin/clang++
+# Create softlinks to clang 3.8 so that cmake finds it FOR TEGRA ONLY
+sudo apt install clang-3.8
+sudo ln -s /usr/bin/clang-3.8 /usr/bin/clang
+sudo ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
 
 # Install x86-only packages
 sudo apt install -y linux-headers-$(uname -r) qt5-default clang ##separate line because headers fails to install on tegras
@@ -45,7 +45,6 @@ git config --global user.email "cameron@aqueti.com"
 
 # Mount NFS
 mkdir /home/cameron/src
-cp /etc/fstab /home/cameron/fstab.old
 echo '10.0.0.228:/shared/users/cameron/src /home/cameron/src nfs user,noatime,nolock,intr,tcp,actimeo=1800 0 0' | sudo tee -a /etc/fstab
 mount /home/cameron/src
 
@@ -79,7 +78,7 @@ EOT
 synergyc Camerons-mbp.local
 
 #32-bit
-#echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib' >> /home/cameron/.bashrc
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib' >> /home/cameron/.bashrc
 #64_bit
 #echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64' >> /home/cameron/.bashrc
 
