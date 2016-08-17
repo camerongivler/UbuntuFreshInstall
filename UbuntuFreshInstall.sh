@@ -14,7 +14,7 @@ sudo apt update
 # Install packages
 sudo apt install -y gnome-session-fallback  #14.04
 sudo apt install -y gnome-session-flashback #16.04
-sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev
+sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev
 
 # Create softlinks to clang 3.8 so that cmake finds it FOR TEGRA ONLY
 sudo apt install clang-3.8
