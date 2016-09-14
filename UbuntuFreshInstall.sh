@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 #run the following commands, then log in as cameron before running this script
 # sudo adduser --uid 1738 cameron
@@ -71,9 +71,13 @@ map <up> <nop>
 map <down> <nop>
 map <right> <nop>
 map <left> <nop>
+:inoremap {<CR> {<CR>}<Esc>O
 :filetype plugin indent on
 :command! Format :%!astyle --style=1tbs --align-pointer=type --keep-one-line-statements
 EOT
+
+mkdir -p ~/.vim/plugin
+cp *.vim ~/.vim/plugin
 
 # Set Synergy to run automatically
 mkdir -p /home/cameron/.config/autostart
