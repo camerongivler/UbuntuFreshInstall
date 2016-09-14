@@ -33,7 +33,8 @@ inoremap <expr> ' <SID>pairquotes("'")
 
 
 function! s:delpair()
-	let l:lst = ['{}','[]','()'] "Dont delete quote pairs let l:col = col('.')
+	let l:lst = ['{}','[]','()'] "Dont delete quote pairs
+    let l:col = col('.')
 	let l:line = getline('.')
 	let l:chr = l:line[l:col-2 : l:col-1]
 	if index(l:lst, l:chr) > -1
@@ -43,7 +44,8 @@ function! s:delpair()
 		if (index(l:lst, l:chr)) > - 1
 			return "\<bs>\<bs>"
 		endif
-		return "\<bs>"
+    endif
+    return "\<bs>"
 endf
 
 function! s:escapepair(right)
