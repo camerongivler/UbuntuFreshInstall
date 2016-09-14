@@ -18,6 +18,9 @@ vnoremap <leader>' "zdi'<c-r>z'
 vnoremap <leader>( "zdi(<c-r>z)
 vnoremap <leader>[ "zdi[<c-r>z]
 vnoremap <leader>{ "zdi{<c-r>z}
+vnoremap <leader>) "zdi(<c-r>z)
+vnoremap <leader>] "zdi[<c-r>z]
+vnoremap <leader>} "zdi{<c-r>z}
 
 inoremap <expr> <bs> <SID>delpair()
 
@@ -30,8 +33,7 @@ inoremap <expr> ' <SID>pairquotes("'")
 
 
 function! s:delpair()
-	let l:lst = ['""',"''",'{}','[]','()']
-	let l:col = col('.')
+	let l:lst = ['{}','[]','()'] "Dont delete quote pairs let l:col = col('.')
 	let l:line = getline('.')
 	let l:chr = l:line[l:col-2 : l:col-1]
 	if index(l:lst, l:chr) > -1
