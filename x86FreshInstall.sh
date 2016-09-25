@@ -92,10 +92,7 @@ EOT
 # Start synergy
 synergyc Camerons-mbp.local
 
-#32-bit
-echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib' >> /home/cameron/.bashrc
-#64_bit
-#echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64' >> /home/cameron/.bashrc
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64' >> /home/cameron/.bashrc
 
 # Create GitHub key
 ssh-keygen -t rsa -b 4096 -C "cameron@aqueti.com" -f /home/cameron/.ssh/id_rsa -N ""
