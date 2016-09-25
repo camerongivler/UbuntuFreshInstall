@@ -48,9 +48,8 @@ mkdir /home/cameron/build
 
 # Set vim preferences
 cat <<EOT > /home/cameron/.vimrc
-:set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-:set number
-:let $INSERTING=0
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent number shiftround hlsearch incsearch smartcase
+let $INSERTING=0
 function! NumberToggle()
     if($INSERTING == 1)
         set norelativenumber
@@ -58,17 +57,19 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-:au FocusLost * :set norelativenumber
-:au FocusGained * :call NumberToggle()
+au FocusLost * :set norelativenumber
+au FocusGained * :call NumberToggle()
 autocmd InsertEnter * :set norelativenumber | :let $INSERTING=1
 autocmd InsertLeave * :set relativenumber | :let $INSERTING=0
 map <up> <nop>
 map <down> <nop>
 map <right> <nop>
 map <left> <nop>
-:inoremap {<CR> {<CR>}<Esc>O
-:filetype plugin indent on
-:command! Format :%!astyle --style=1tbs --align-pointer=type --keep-one-line-statements
+inoremap {<CR> {<CR>}<Esc>O
+noremap <tab> i<tab><right><esc>
+"noremap <s-tab> :call ShiftTab()<cr>
+filetype plugin indent on
+command! Format :%!astyle --style=1tbs --align-pointer=type --keep-one-line-statements
 EOT
 
 mkdir -p ~/.vim/plugin
