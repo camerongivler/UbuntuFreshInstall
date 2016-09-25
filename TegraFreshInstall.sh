@@ -17,12 +17,9 @@ sudo apt install -y gnome-session-flashback #16.04
 sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev
 
 # Create softlinks to clang 3.8 so that cmake finds it FOR TEGRA ONLY
-sudo apt install clang-3.8
-sudo ln -s /usr/bin/clang-3.8 /usr/bin/clang
-sudo ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
-
-# Install x86-only packages
-sudo apt install -y linux-headers-$(uname -r) qt5-default qtcreator-ubuntu* clang ##separate line because headers fails to install on tegras
+sudo apt install clang-3.6
+sudo ln -s /usr/bin/clang-3.6 /usr/bin/clang
+sudo ln -s /usr/bin/clang++-3.6 /usr/bin/clang++
 
 # Install FlyCapture packages
 sudo apt install -y libgtkmm-2.4-1c2a libglademm-2.4-1c2a #14.04
