@@ -10,7 +10,7 @@ sudo apt update
 # Install packages
 sudo apt install -y gnome-session-fallback  #14.04
 sudo apt install -y gnome-session-flashback #16.04
-sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev valgrind
+sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev valgrind locate
 
 # Install FlyCapture packages
 sudo apt install -y libgtkmm-2.4-1c2a libglademm-2.4-1c2a #14.04
