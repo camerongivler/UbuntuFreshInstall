@@ -10,7 +10,7 @@ sudo apt update
 # Install packages
 sudo apt install -y gnome-session-fallback  #14.04
 sudo apt install -y gnome-session-flashback #16.04
-sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev
+sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev valgrind
 
 # Install FlyCapture packages
 sudo apt install -y libgtkmm-2.4-1c2a libglademm-2.4-1c2a #14.04
@@ -33,11 +33,13 @@ git config --global user.email "cameron@aqueti.com"
 
 # Mount NFS
 mkdir /home/cameron/src
+chmod 000 /home/cameron/src
 echo '10.0.0.228:/shared/users/cameron/src /home/cameron/src nfs user,noatime,nolock,intr,tcp,actimeo=1800 0 0' | sudo tee -a /etc/fstab
 mount /home/cameron/src
 
 # Create build directory
 mkdir /home/cameron/build
+chown cameron /home/cameron/build
 
 # Set vim preferences
 cat <<EOT > /home/cameron/.vimrc
@@ -67,6 +69,7 @@ EOT
 
 mkdir -p ~/.vim/plugin
 cp *.vim ~/.vim/plugin
+chown -R cameron ~/.vim/plugin
 
 # Set Synergy to run automatically
 mkdir -p /home/cameron/.config/autostart

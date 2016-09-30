@@ -7,7 +7,11 @@
 ./shared.sh
 
 # Should change /dev/sda1 to UUID="<uuid>"
+mkdir -p /media/data1
+chown cameron /media/data1
+chmod 000 /media/data1
 echo '/dev/sda1 /media/data1 ext4 user,noatime 0 0' | sudo tee -a /etc/fstab
+mount /media/data1
 
 # Create softlinks to clang 3.8 so that cmake finds it FOR TEGRA ONLY
 sudo apt install clang-3.6
