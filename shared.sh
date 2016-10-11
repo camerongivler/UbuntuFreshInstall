@@ -43,7 +43,7 @@ chown cameron /home/cameron/build
 
 # Set vim preferences
 cat <<EOT > /home/cameron/.vimrc
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent number shiftround hlsearch incsearch smartcase
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent number shiftround hlsearch incsearch ignorecase smartcase
 let \$INSERTING=0
 function! NumberToggle()
     if(\$INSERTING == 1)
