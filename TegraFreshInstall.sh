@@ -1,11 +1,11 @@
-!/bin/bash
+#!/bin/bash
 
 #run the following commands, then log in as cameron before running this script
 # sudo adduser --uid 1738 cameron
 # sudo adduser cameron sudo
 
-sudo sh shared.sh
-sudo sh once.sh
+./shared.sh
+./once.sh
 
 # Should change /dev/sda1 to UUID="<uuid>"
 mkdir -p /media/data1

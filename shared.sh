@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # Add all Ubuntu repositories
 sudo add-apt-repository main
