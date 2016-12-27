@@ -21,4 +21,5 @@ sudo ln -s /usr/bin/clang++-3.6 /usr/bin/clang++
 
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib' >> /home/cameron/.bashrc
 
+echo #newline
 echo "Done. Reboot computer for updates to take effect"
