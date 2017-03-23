@@ -9,7 +9,7 @@
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64' >> /home/cameron/.bashrc
 
 # Install x86-only packages
-sudo apt install -y linux-headers-$(uname -r) qt5-default qtcreator clang
+sudo apt install -y linux-headers-$(uname -r) qt5-default qtcreator clang unity-chromium-extension
 sudo apt install qtcreator-plugin-ubuntu* #16.04
 sudo apt install qtcreator-ubuntu* #14.04
 
