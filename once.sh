@@ -2,23 +2,23 @@
 # Mount NFS
 mkdir /home/cameron/src
 chmod 000 /home/cameron/src
-echo '10.0.0.228:/shared/users/cameron/src /home/cameron/src nfs user,noatime,nolock,intr,tcp,actimeo=1800 0 0' | sudo tee -a /etc/fstab
+echo '10.0.0.10:/shared/users/cameron/src /home/cameron/src nfs user,noatime,nolock,intr,tcp,exec,actimeo=1800 0 0' | sudo tee -a /etc/fstab
 mount /home/cameron/src
 
 # Set Synergy to run automatically
-mkdir -p /home/cameron/.config/autostart
-cat <<EOT > /home/cameron/.config/autostart/synergy.desktop
-[Desktop Entry]
-Type=Application
-Exec=synergyc Camerons-mbp.local
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=Synergy
-Name=Synergy
-Comment[en_US]=Start Synergy Client
-Comment=Start Synergy Client
-EOT
+#mkdir -p /home/cameron/.config/autostart
+#cat <<EOT > /home/cameron/.config/autostart/synergy.desktop
+#[Desktop Entry]
+#Type=Application
+#Exec=synergyc Camerons-mbp.local
+#Hidden=false
+#NoDisplay=false
+#X-GNOME-Autostart-enabled=true
+#Name[en_US]=Synergy
+#Name=Synergy
+#Comment[en_US]=Start Synergy Client
+#Comment=Start Synergy Client
+#EOT
 
 # Start synergy
 synergyc Camerons-mbp.local

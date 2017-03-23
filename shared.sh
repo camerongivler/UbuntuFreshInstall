@@ -10,7 +10,7 @@ sudo apt update
 # Install packages
 sudo apt install -y gnome-session-fallback  #14.04
 sudo apt install -y gnome-session-flashback #16.04
-sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev valgrind locate
+sudo apt install -y aptitude cmake-curses-gui doxygen vim-gnome python-dev python-numpy python3-dev python3-numpy chromium-browser python-pip curl git build-essential unity-chromium-extension dkms astyle synergy xclip bash-completion libjpeg-dev libtiff5-dev libcurl4-gnutls-dev libusb-1.0-0-dev valgrind locate clang
 
 # Install FlyCapture packages
 sudo apt install -y libgtkmm-2.4-1c2a libglademm-2.4-1c2a #14.04
@@ -33,7 +33,7 @@ git config --global user.email "cameron@aqueti.com"
 
 # Set vim preferences
 cat <<EOT > /home/cameron/.vimrc
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent number shiftround hlsearch incsearch ignorecase smartcase
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent number shiftround hlsearch incsearch ignorecase smartcase mouse=a relativenumber
 let \$INSERTING=0
 function! NumberToggle()
     if(\$INSERTING == 1)
@@ -53,6 +53,7 @@ map <left> <nop>
 inoremap {<CR> {<CR>}<Esc>O
 noremap <tab> i<tab><right><esc>
 "noremap <s-tab> :call ShiftTab()<cr>
+nnoremap ; mxA;<Esc>\`x
 filetype plugin indent on
 command! Format :%!astyle --style=1tbs --align-pointer=type --keep-one-line-statements
 EOT
