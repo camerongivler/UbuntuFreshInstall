@@ -1,0 +1,3 @@
+[submodule "vim-cpp-enhanced-highlight"]
+	path = vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
